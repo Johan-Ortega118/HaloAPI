@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/characters",
+    "public": "dist/haloapi",
     "ignore": [
       "firebase.json",
       "**/.*",
