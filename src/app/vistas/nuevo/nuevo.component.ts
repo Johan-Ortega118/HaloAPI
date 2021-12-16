@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from '../../modelos/character.interface'
+import { User } from '../../modelos/character.interface'
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/servicios/api/api.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -22,8 +22,8 @@ export class NuevoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  postForm(form:Character){
-    this.api.postCharacters(form).subscribe(data => {
+  postForm(form:User){
+    this.api.postUsers(form).subscribe(data => {
       console.log(data);
     })
   };
