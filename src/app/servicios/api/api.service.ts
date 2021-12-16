@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from 'rxjs'
 import { Response } from 'src/app/modelos/response.interface';
-import { Character } from 'src/app/modelos/character.interface';
+import { User } from 'src/app/modelos/character.interface';
 import { ListCharacters } from 'src/app/modelos/listcharacters.interface';
 
 @Injectable({
@@ -15,12 +15,12 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAllUsers():Observable<ListCharacters[]>{
-    let direction: string = this.url + "/character";
+    let direction: string = this.url + "/User";
     return this.http.get<ListCharacters[]>(direction);
   }
 
-  postUsers(form:Character):Observable<Response>{
-    let direction: string = this.url + "/character"
+  postUsers(form:User):Observable<Response>{
+    let direction: string = this.url + "/User"
     return this.http.post<Response>(direction, form);
   }
 }
